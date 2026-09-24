@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>Laboratorio EXO-TECH | Flujo 100% Digital - Precisión Dental a tu Alcance</title>
+  <meta name="description" content="Laboratorio dental digital de alta precisión. Especialistas en diseño y fresado CAD/CAM Exocad, coronas en zirconio y disilicato, prótesis sobre implantes y guías quirúrgicas.">
+  <meta name="keywords" content="laboratorio dental digital, Exocad, CAD CAM dental, coronas zirconio, protesis sobre implantes, guias quirurgicas, disilicato de litio, fresado dental">
+  <meta name="theme-color" content="#0d1527">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Laboratorio EXO-TECH | Flujo 100% Digital">
+  <meta property="og:description" content="Precisión dental micrométrica con tecnología CAD/CAM Exocad. Tiempos de entrega récord y ajuste pasivo garantizado.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Three.js & OrbitControls from trusted CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar" id="announcementBar">
+    <div class="container announcement-content">
+      <span class="announcement-badge">CAD/CAM 5-AXIS</span>
+      <span class="announcement-text">Recepción de archivos STL / PLY 24/7 de todos los escáneres intraorales (Medit, 3Shape, iTero, Shining 3D).</span>
+      <a href="#contacto" class="announcement-link">Enviar Caso Hoy &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" id="headerLogo" aria-label="Laboratorio Dental EXO-TECH">
+        <div class="brand-symbol">
+          <img src="assets/logo.png" alt="Laboratorio EXO-TECH" class="brand-logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">EXO-TECH</span>
+          <span class="brand-tagline">LABORATORIO DENTAL DIGITAL</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" id="desktopNav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#beneficios" class="nav-link">Beneficios</a></li>
+          <li><a href="#soluciones" class="nav-link">Soluciones</a></li>
+          <li><a href="#flujo-digital" class="nav-link">Flujo Digital</a></li>
+          <li><a href="#materiales" class="nav-link">Materiales</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <a href="#contacto" class="btn btn-sm btn-primary hidden-mobile" id="btnHeaderCta">
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"/>
+          </svg>
+          <span>Enviar Caso STL</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="brand-symbol">
+          <img src="assets/logo.png" alt="Laboratorio EXO-TECH" class="brand-logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">EXO-TECH</span>
+          <span class="brand-tagline">FLUJO 100% DIGITAL</span>
+        </div>
+      </div>
+      <button class="drawer-close" id="drawerClose" aria-label="Cerrar menú">&times;</button>
+    </div>
+    <ul class="drawer-nav-list">
+      <li><a href="#inicio" class="drawer-link">Inicio</a></li>
+      <li><a href="#beneficios" class="drawer-link">Beneficios</a></li>
+      <li><a href="#soluciones" class="drawer-link">Soluciones CAD/CAM</a></li>
+      <li><a href="#flujo-digital" class="drawer-link">Flujo de Trabajo</a></li>
+      <li><a href="#materiales" class="drawer-link">Materiales Certificados</a></li>
+      <li><a href="#contacto" class="drawer-link">Contacto Directo</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="#contacto" class="btn btn-primary btn-block drawer-action-btn">Enviar Caso STL / Cotizar</a>
+      <p class="drawer-info">Atención exclusiva a Odontólogos, Clínicas y Especialistas.</p>
+    </div>
+  </div>
+
+  <main id="inicio">
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <!-- Hero Text & Value Proposition -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>TECNOLOGÍA DENTAL CAD/CAM EXOCAD DE PRECISIÓN</span>
+          </div>
+
+          <h1 class="hero-title">
+            Flujo 100% Digital - <br class="hidden-mobile">
+            <span class="text-highlight">Precisión Dental</span> a tu Alcance
+          </h1>
+
+          <p class="hero-description">
+            Transformamos tus escaneos intraorales en restauraciones perfectas. Diseño milimétrico en Exocad, fresado robótico de 5 ejes y sinterizado controlado en zirconio y disilicato con ajuste pasivo garantizado.
+          </p>
+
+          <!-- Key Metrics Pills -->
+          <div class="hero-specs-grid">
+            <div class="spec-item">
+              <div class="spec-value">&le; 12 &mu;m</div>
+              <div class="spec-label">Ajuste marginal</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-value">24-48 h</div>
+              <div class="spec-label">Tiempo récord</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-value">0%</div>
+              <div class="spec-label">Repeticiones en sillón</div>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#contacto" class="btn btn-primary btn-lg" id="heroCtaPrimary">
+              <span>Cotizar Caso Clínico</span>
+              <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+            <button class="btn btn-outline btn-lg" id="heroOpenWaSmart" aria-label="Abrir WhatsApp Inteligente">
+              <svg class="btn-icon-wa" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.974.553 1.83.847 2.781.847h.005c3.18 0 5.767-2.587 5.768-5.766.001-3.181-2.585-5.77-5.767-5.771zm3.393 8.163c-.144.405-.837.774-1.17.824-.312.045-.694.06-2.029-.49-1.705-.702-2.793-2.45-2.879-2.565-.084-.114-.687-.914-.687-1.744 0-.829.434-1.238.587-1.396.155-.157.34-.196.452-.196.114 0 .227.001.326.006.105.005.244-.04.382.291.144.343.491 1.198.534 1.285.043.088.072.19.014.305-.058.114-.087.185-.173.286-.086.101-.182.226-.26.305-.088.087-.179.182-.077.357.102.175.454.749.975 1.213.671.597 1.236.782 1.411.87.175.087.277.073.38-.045.103-.117.438-.51.554-.685.117-.175.233-.146.394-.087.16.058 1.02.481 1.195.568.175.088.291.131.335.205.044.073.044.423-.1 1.031z"/>
+              </svg>
+              <span>WhatsApp Directo</span>
+            </button>
+          </div>
+
+          <!-- Trust & Compatibility -->
+          <div class="hero-trust">
+            <span class="trust-label">Compatible con:</span>
+            <div class="scanner-tags">
+              <span class="scanner-pill">Medit i500 / i700</span>
+              <span class="scanner-pill">3Shape TRIOS</span>
+              <span class="scanner-pill">iTero Element</span>
+              <span class="scanner-pill">Shining 3D</span>
+              <span class="scanner-pill">Primescan</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero 3D Central Dental Model Viewport -->
+        <div class="hero-3d-wrapper">
+          <div class="dental-viewport-card" id="dentalViewportContainer">
+            <!-- Viewport Top Bar -->
+            <div class="viewport-header">
+              <div class="viewport-title-group">
+                <span class="live-dot"></span>
+                <span class="viewport-title">MODELO DENTAL 3D INTERACTIVO</span>
+              </div>
+              <div class="viewport-cad-badge" id="cadModeLabel">MODO CAD/CAM</div>
+            </div>
+
+            <!-- Three.js Canvas Container -->
+            <div class="canvas-mount-point" id="dentalCanvasMount">
+              <!-- Canvas will be injected by JavaScript -->
+              <div class="viewport-gesture-hint" id="gestureHint">
+                <svg class="hint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                </svg>
+                <span>Arrastra para rotar &bull; Pellizca para zoom</span>
+              </div>
+            </div>
+
+            <!-- 3D Controls Control Bar -->
+            <div class="viewport-controls-panel">
+              <!-- View Mode Tabs -->
+              <div class="control-tabs" role="tablist">
+                <button class="tab-btn active" data-view="full" role="tab" aria-selected="true" id="tabFullArch">
+                  Oclusión Completa
+                </button>
+                <button class="tab-btn" data-view="upper" role="tab" aria-selected="false" id="tabUpperArch">
+                  Arcada Superior
+                </button>
+                <button class="tab-btn" data-view="exploded" role="tab" aria-selected="false" id="tabExploded">
+                  Despiece Implante
+                </button>
+              </div>
+
+              <!-- Quick Toggles -->
+              <div class="control-actions">
+                <button class="action-btn" id="btnToggleShading" title="Cambiar a Modo Exocad Wireframe">
+                  <svg class="ctrl-icon" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12z"/>
+                  </svg>
+                  <span id="shadingBtnText">Ver Malla CAD</span>
+                </button>
+
+                <button class="action-btn" id="btnToggleRotate" title="Pausar o reanudar rotación automática">
+                  <svg class="ctrl-icon" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                  </svg>
+                  <span id="rotateBtnText">Rotar</span>
+                </button>
+
+                <button class="action-btn" id="btnPlayAssembly" title="Reproducir animación automática de ensamblado CAD/CAM">
+                  <svg class="ctrl-icon" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                  </svg>
+                  <span id="playAssemblyText">Animar Despiece</span>
+                </button>
+
+                <button class="action-btn" id="btnResetView" title="Centrar cámara">
+                  <svg class="ctrl-icon" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Centrar</span>
+                </button>
+              </div>
+
+              <!-- Interactive Exploded Assembly Slider (shown when exploded view or manual adjustment) -->
+              <div class="exploded-slider-container" id="sliderContainer">
+                <div class="slider-info">
+                  <span class="slider-label">Ensamblado CAD/CAM de Precisión:</span>
+                  <span class="slider-value" id="sliderValDisplay">0%</span>
+                </div>
+                <input type="range" min="0" max="100" value="0" class="precision-slider" id="assemblySlider" aria-label="Nivel de despiece de implante y corona">
+                <div class="slider-step-tags">
+                  <span>Ensamble Pasivo</span>
+                  <span>Ti-Base &amp; Tornillo</span>
+                  <span>Corona Zirconio</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Viewport Footer Specs -->
+            <div class="viewport-footer">
+              <div class="tech-spec-item">
+                <span class="spec-bullet"></span>
+                <span>Material: <strong>Zirconio Multicapa Transparente &amp; Ti Grado 5</strong></span>
+              </div>
+              <div class="tech-spec-item">
+                <span class="spec-bullet"></span>
+                <span>Resolución: <strong>5 ejes simétricos</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: BENEFICIOS CLÍNICOS Y TÉCNICOS -->
+    <section class="section section-benefits" id="beneficios">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">VENTAJAS COMPETITIVAS</span>
+          <h2 class="section-title">Ingeniería Digital para Resultados Predecibles</h2>
+          <p class="section-subtitle">
+            Diseñado para odontólogos y clínicas que exigen exactitud en cada rehabilitación, reduciendo tiempos de sillón y garantizando satisfacción total al paciente.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          
+          <!-- Beneficio 1: Rapidez Digital -->
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="benefit-svg">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Rapidez Digital</h3>
+            <p class="benefit-description">
+              Recepción directa de archivos STL/PLY vía web o WhatsApp sin pérdida de tiempo en mensajería ni vaciado de modelos de yeso. 
+            </p>
+            <ul class="benefit-points">
+              <li>
+                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Producción en 24 a 48 horas para piezas individuales.</span>
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Validación inmediata de márgenes y espesores mínimos.</span>
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Trazabilidad en tiempo real del estado de cada orden.</span>
+              </li>
+            </ul>
+            <div class="card-footer-meta">
+              <span class="meta-highlight">Ahorro de hasta 4 días hábiles</span>
+            </div>
+          </div>
+
+          <!-- Beneficio 2: Ajuste Exacto -->
+          <div class="benefit-card featured-benefit">
+            <div class="benefit-badge">MÁXIMA DEMANDA</div>
+            <div class="benefit-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="benefit-svg">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Ajuste Exacto</h3>
+            <p class="benefit-description">
+              Tolerancia micrométrica en fresado industrial de 5 ejes continuos. Sellado marginal biológico impecable que previene filtraciones y descementaciones.
+            </p>
+            <ul class="benefit-points">
+              <li>
+                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Ajuste marginal de 10 a 15 micras verificado en lupa.</span>
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Ajuste pasivo verificado en estructuras sobre implantes.</span>
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Puntos de contacto y oclusión balanceada según Exocad.</span>
+              </li>
+            </ul>
+            <div class="card-footer-meta">
+              <span class="meta-highlight">Cero retoques en boca</span>
+            </div>
+          </div>
+
+          <!-- Beneficio 3: Estética Superior -->
+          <div class="benefit-card">
+            <div class="benefit-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="benefit-svg">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Estética Superior</h3>
+            <p class="benefit-description">
+              Mimetismo biomimético excepcional. Empleamos discos de zirconio multicapa 4D y disilicato de litio de alta translucidez con caracterización artesanal.
+            </p>
+            <ul class="benefit-points">
+              <li>
+                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Gradiente cromático natural: incisal translúcido a cervical cálido.</span>
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Maquillaje cerámico y micro-textura periquimata realista.</span>
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Compatibilidad exacta con guías VITA Classical y 3D-Master.</span>
+              </li>
+            </ul>
+            <div class="card-footer-meta">
+              <span class="meta-highlight">Naturalidad óptica imperceptible</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Comparative Banner -->
+        <div class="comparison-strip">
+          <div class="comparison-header">
+            <h4>Comparativa: Flujo Tradicional vs. Flujo EXO-TECH</h4>
+          </div>
+          <div class="table-scroll-hint hidden-desktop">
+            <span>&larr; Desliza lateralmente para comparar par&aacute;metros &rarr;</span>
+          </div>
+          <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Parámetro</th>
+                  <th>Flujo Analógico Tradicional</th>
+                  <th class="col-highlight">Flujo EXO-TECH CAD/CAM</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Toma de impresión</td>
+                  <td>Alginato / siliconas con distorsión térmica</td>
+                  <td class="col-highlight">Escaneo intraoral óptico sin deformaciones</td>
+                </tr>
+                <tr>
+                  <td>Tiempo total de entrega</td>
+                  <td>7 a 14 días laborables</td>
+                  <td class="col-highlight">24 a 48 horas con envío prioritario</td>
+                </tr>
+                <tr>
+                  <td>Ajuste marginal</td>
+                  <td>50 - 100 micras (riesgo de microfiltración)</td>
+                  <td class="col-highlight">&le; 12 micras (sellado de laboratorio probado)</td>
+                </tr>
+                <tr>
+                  <td>Ajustes en el sillón</td>
+                  <td>Alivios oclusales y proximales frecuentes</td>
+                  <td class="col-highlight">Inserción directa sin repeticiones</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: SOLUCIONES Y SERVICIOS -->
+    <section class="section section-solutions" id="soluciones">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">CATÁLOGO DE ESPECIALIDADES</span>
+          <h2 class="section-title">Soluciones Integrales para Odontología Digital</h2>
+          <p class="section-subtitle">
+            Equipamiento de fresado de última generación, resinas biocompatibles y software Exocad Ultimate para satisfacer los requerimientos clínicos más complejos.
+          </p>
+        </div>
+
+        <div class="solutions-grid">
+          
+          <!-- Solución 1: Diseño y fresado CAD/CAM Exocad -->
+          <div class="solution-card" id="cardCadCam">
+            <div class="solution-header">
+              <span class="solution-num">01</span>
+              <div class="solution-badge">Exocad Certified</div>
+            </div>
+            <h3 class="solution-name">Diseño y fresado CAD/CAM Exocad</h3>
+            <p class="solution-desc">
+              Modelado anatómico digital con perfiles de emergencia funcionales, puntos de contacto individualizados y diseño de sonrisa con simulador facial.
+            </p>
+            <div class="solution-features">
+              <span class="feature-tag">Exocad Ultimate DentalCAD</span>
+              <span class="feature-tag">Fresado 5 ejes seco/húmedo</span>
+              <span class="feature-tag">Inlays / Onlays / Overlays</span>
+              <span class="feature-tag">Archivos STL y PLY Abiertos</span>
+            </div>
+            <button class="btn btn-outline btn-sm btn-category-select" data-category="Diseño CAD/CAM">
+              <span>Consultar este servicio</span>
+              &rarr;
+            </button>
+          </div>
+
+          <!-- Solución 2: Coronas y puentes -->
+          <div class="solution-card" id="cardCoronas">
+            <div class="solution-header">
+              <span class="solution-num">02</span>
+              <div class="solution-badge">Alta Estética</div>
+            </div>
+            <h3 class="solution-name">Coronas y Puentes</h3>
+            <p class="solution-desc">
+              Restauraciones fijas monolíticas y estratificadas. Resistencia flexural de hasta 1200 MPa en zirconio y 500 MPa en disilicato de litio para máxima durabilidad.
+            </p>
+            <div class="solution-features">
+              <span class="feature-tag">Zirconio Multicapa 4D</span>
+              <span class="feature-tag">Disilicato Prensado e-max</span>
+              <span class="feature-tag">Carillas de Mínima Invasión</span>
+              <span class="feature-tag">Puentes de Gran Luz</span>
+            </div>
+            <button class="btn btn-outline btn-sm btn-category-select" data-category="Zirconio y Disilicato">
+              <span>Consultar este servicio</span>
+              &rarr;
+            </button>
+          </div>
+
+          <!-- Solución 3: Prótesis sobre implantes -->
+          <div class="solution-card" id="cardImplantes">
+            <div class="solution-header">
+              <span class="solution-num">03</span>
+              <div class="solution-badge">Precisión Pasiva</div>
+            </div>
+            <h3 class="solution-name">Prótesis sobre Implantes</h3>
+            <p class="solution-desc">
+              Soluciones atornilladas y cementadas para todas las marcas del mercado (Straumann, Nobel, Zimmer, MIS, etc.). Pilares personalizados con chimeneas anguladas.
+            </p>
+            <div class="solution-features">
+              <span class="feature-tag">Pilares Custom Ti-Base</span>
+              <span class="feature-tag">Barras Híbridas Toronto</span>
+              <span class="feature-tag">Chimenea Angulada hasta 25°</span>
+              <span class="feature-tag">Titanio Grado 5 Médico</span>
+            </div>
+            <button class="btn btn-outline btn-sm btn-category-select" data-category="Prótesis sobre implantes">
+              <span>Consultar este servicio</span>
+              &rarr;
+            </button>
+          </div>
+
+          <!-- Solución 4: Guías quirúrgicas -->
+          <div class="solution-card" id="cardGuias">
+            <div class="solution-header">
+              <span class="solution-num">04</span>
+              <div class="solution-badge">Cirugía Guiada</div>
+            </div>
+            <h3 class="solution-name">Guías Quirúrgicas</h3>
+            <p class="solution-desc">
+              Fusión tomográfica CBCT + escaneo intraoral para planificar y fresar/imprimir guías mucosoportadas, dentosoportadas o sobre hueso con casquillos metálicos.
+            </p>
+            <div class="solution-features">
+              <span class="feature-tag">Planificación CBCT DICOM</span>
+              <span class="feature-tag">Resina Clase IIa Autoclavable</span>
+              <span class="feature-tag">Casquillos Metálicos Calibrados</span>
+              <span class="feature-tag">Cirugía Mínimamente Invasiva</span>
+            </div>
+            <button class="btn btn-outline btn-sm btn-category-select" data-category="Modelos 3D">
+              <span>Consultar este servicio</span>
+              &rarr;
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: FLUJO DE TRABAJO 100% DIGITAL -->
+    <section class="section section-workflow" id="flujo-digital">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">PROCESO ESTANDARIZADO</span>
+          <h2 class="section-title">¿Cómo trabajamos tu caso clínico?</h2>
+          <p class="section-subtitle">
+            Un circuito cerrado, rápido y predecible desde el sillón dental de tu clínica hasta la colocación final en boca.
+          </p>
+        </div>
+
+        <div class="workflow-steps">
+          
+          <div class="workflow-step-card">
+            <div class="step-badge">Paso 1</div>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <h3 class="step-title">Escaneo y Envío</h3>
+            <p class="step-desc">
+              Realizas el escaneo con tu escáner intraoral y nos envías los archivos STL o nos conectas en la plataforma oficial (Medit Link, 3Shape Communicate).
+            </p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="step-badge">Paso 2</div>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </div>
+            <h3 class="step-title">Diseño CAD Exocad</h3>
+            <p class="step-desc">
+              Nuestros técnicos diseñan la restauración respetando perfiles de emergencia, grosores mínimos y morfología oclusal. Te enviamos capturas o visualizador 3D si lo requieres.
+            </p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="step-badge">Paso 3</div>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </div>
+            <h3 class="step-title">Fresado CAM 5 Ejes</h3>
+            <p class="step-desc">
+              Fresado en discos calibrados de zirconio o disilicato, sinterizado computarizado lento y caracterización individualizada con maquillajes cerámicos de alta resistencia.
+            </p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="step-badge">Paso 4</div>
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <h3 class="step-title">Control Óptico y Entrega</h3>
+            <p class="step-desc">
+              Inspección óptica de sellado marginal, desinfección ultrasónica y embalaje protector rígido. Listo para su instalación inmediata en el paciente.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: MATERIALES Y CERTIFICACIONES -->
+    <section class="section section-materials" id="materiales">
+      <div class="container">
+        
+        <div class="materials-wrapper">
+          <div class="materials-text">
+            <span class="section-tag">CALIDAD BIOMÉDICA CERTIFICADA</span>
+            <h2 class="section-title">Solo materiales originales con respaldo científico</h2>
+            <p class="section-subtitle">
+              En Laboratorio EXO-TECH no utilizamos materias primas genéricas. Cada rehabilitación dental se entrega con tarjeta de trazabilidad del lote y certificación de pureza médica.
+            </p>
+
+            <div class="materials-checklist">
+              <div class="mat-item">
+                <div class="mat-icon">&#10003;</div>
+                <div>
+                  <h4>Zirconio Multicapa de Gradiente 4D</h4>
+                  <p>Translúcido en borde incisal (49%) y alta tenacidad cervical (1200 MPa).</p>
+                </div>
+              </div>
+              <div class="mat-item">
+                <div class="mat-icon">&#10003;</div>
+                <div>
+                  <h4>Disilicato de Litio Prensado y Fresado</h4>
+                  <p>Matriz vítrea de máxima luminosidad y resistencia para el sector anterior.</p>
+                </div>
+              </div>
+              <div class="mat-item">
+                <div class="mat-icon">&#10003;</div>
+                <div>
+                  <h4>Bases Ti-Base y Aditamentos Grado Médico 5</h4>
+                  <p>Compatibilidad pasiva verificada para evitar tensiones biológicas en hueso.</p>
+                </div>
+              </div>
+              <div class="mat-item">
+                <div class="mat-icon">&#10003;</div>
+                <div>
+                  <h4>Resinas Biocompatibles FDA / CE Clase IIa</h4>
+                  <p>Polímeros no tóxicos y esterilizables en autoclave para guías y férulas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="materials-graphic-card">
+            <div class="graphic-badge">PROTOCOLO DE CONTROL</div>
+            <div class="guarantee-box">
+              <div class="guarantee-seal">
+                <span class="seal-year">100%</span>
+                <span class="seal-text">AJUSTE PASIVO</span>
+              </div>
+              <h3>Garantía EXO-TECH</h3>
+              <p>Si la restauración requiere repetición por desajuste marginal o discrepancia con el archivo STL enviado, la repetimos sin costo alguno en plazo urgente.</p>
+            </div>
+            <div class="stats-pills-row">
+              <div class="stat-box">
+                <span class="stat-number">+18,000</span>
+                <span class="stat-caption">Unidades fresadas</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">99.8%</span>
+                <span class="stat-caption">Aceptación clínica</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: SMART CONTACT SYSTEM (Formulario + WhatsApp Inteligente) -->
+    <section class="section section-contact" id="contacto">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">CONTACTO DIRECTO E INTELIGENTE</span>
+          <h2 class="section-title">Envía tu Caso o Solicita Lista de Precios</h2>
+          <p class="section-subtitle">
+            Selecciona el tipo de trabajo para conectar de inmediato con el especialista técnico correspondiente. Te responderemos en minutos.
+          </p>
+        </div>
+
+        <div class="contact-card-grid">
+          
+          <!-- Smart Contact Form -->
+          <div class="contact-form-panel">
+            <h3 class="panel-heading">Formulario de Consulta Técnica</h3>
+            <p class="panel-sub">Completa los datos del caso para generar un mensaje personalizado directo.</p>
+
+            <form id="smartContactForm" novalidate>
+              
+              <!-- Category Selector (Mandatory Requirement) -->
+              <div class="form-group">
+                <label for="formCategory" class="form-label">
+                  Especialidad de la Consulta <span class="required-star">*</span>
+                </label>
+                <div class="custom-select-wrapper">
+                  <select id="formCategory" name="category" class="form-select" required>
+                    <option value="" disabled selected>Selecciona una especialidad...</option>
+                    <option value="Zirconio y Disilicato">Zirconio y Disilicato (Coronas, Puentes, Carillas)</option>
+                    <option value="Prótesis sobre implantes">Prótesis sobre implantes (Ti-Base, Barras, Híbridas)</option>
+                    <option value="Modelos 3D">Modelos 3D y Guías Quirúrgicas</option>
+                    <option value="Diseño CAD/CAM">Diseño CAD/CAM Exocad</option>
+                    <option value="Lista de Precios y Nuevas Cuentas">Solicitud de Lista de Precios Oficial</option>
+                  </select>
+                </div>
+                <span class="form-hint">Tu mensaje se configurará automáticamente según esta elección.</span>
+              </div>
+
+              <!-- Two Column Fields -->
+              <div class="form-row">
+                <div class="form-group col-half">
+                  <label for="doctorName" class="form-label">
+                    Nombre del Odontólogo / Clínica <span class="required-star">*</span>
+                  </label>
+                  <input type="text" id="doctorName" name="doctorName" class="form-input" placeholder="Ej: Dr. Roberto Méndez" required>
+                </div>
+
+                <div class="form-group col-half">
+                  <label for="doctorPhone" class="form-label">
+                    Teléfono / WhatsApp <span class="required-star">*</span>
+                  </label>
+                  <input type="tel" id="doctorPhone" name="doctorPhone" class="form-input" placeholder="Ej: +54 9 11 2345-6789" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-half">
+                  <label for="doctorEmail" class="form-label">
+                    Correo Electrónico
+                  </label>
+                  <input type="email" id="doctorEmail" name="doctorEmail" class="form-input" placeholder="clinica@ejemplo.com">
+                </div>
+
+                <div class="form-group col-half">
+                  <label for="scannerBrand" class="form-label">
+                    Escáner Intraoral Utilizado
+                  </label>
+                  <select id="scannerBrand" name="scannerBrand" class="form-select">
+                    <option value="No especificado">Seleccionar escáner...</option>
+                    <option value="Medit (i500/i600/i700)">Medit (i500 / i600 / i700)</option>
+                    <option value="3Shape TRIOS">3Shape TRIOS</option>
+                    <option value="iTero Element">iTero Element</option>
+                    <option value="Shining 3D Aoralscan">Shining 3D Aoralscan</option>
+                    <option value="Carestream / Dentsply Sirona">Carestream / Primescan</option>
+                    <option value="Otro escáner STL">Otro escáner (STL/PLY)</option>
+                    <option value="Aún no tengo escáner">Aún no poseo escáner (Modelos físicos)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Message / Case Details -->
+              <div class="form-group">
+                <label for="caseDetails" class="form-label">
+                  Detalles del Caso o Preguntas
+                </label>
+                <textarea id="caseDetails" name="caseDetails" class="form-textarea" rows="3" placeholder="Indica pieza dental (#), tipo de material deseado, color (VITA) o consulta puntual..."></textarea>
+              </div>
+
+              <!-- Dynamic WhatsApp Message Preview -->
+              <div class="message-preview-box" id="messagePreviewWrapper">
+                <div class="preview-header">
+                  <span class="preview-title">Vista previa del mensaje pre-configurado para el laboratorio:</span>
+                </div>
+                <div class="preview-content" id="messagePreviewText">
+                  "Hola Laboratorio EXO-TECH, quisiera consultar sobre..."
+                </div>
+              </div>
+
+              <!-- Submission Buttons -->
+              <div class="form-actions-cluster">
+                <button type="button" class="btn btn-whatsapp btn-block" id="btnSubmitWhatsApp">
+                  <svg class="btn-icon-wa" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.974.553 1.83.847 2.781.847h.005c3.18 0 5.767-2.587 5.768-5.766.001-3.181-2.585-5.77-5.767-5.771zm3.393 8.163c-.144.405-.837.774-1.17.824-.312.045-.694.06-2.029-.49-1.705-.702-2.793-2.45-2.879-2.565-.084-.114-.687-.914-.687-1.744 0-.829.434-1.238.587-1.396.155-.157.34-.196.452-.196.114 0 .227.001.326.006.105.005.244-.04.382.291.144.343.491 1.198.534 1.285.043.088.072.19.014.305-.058.114-.087.185-.173.286-.086.101-.182.226-.26.305-.088.087-.179.182-.077.357.102.175.454.749.975 1.213.671.597 1.236.782 1.411.87.175.087.277.073.38-.045.103-.117.438-.51.554-.685.117-.175.233-.146.394-.087.16.058 1.02.481 1.195.568.175.088.291.131.335.205.044.073.044.423-.1 1.031z"/>
+                  </svg>
+                  <span>Enviar por WhatsApp Categorizado</span>
+                </button>
+
+                <button type="submit" class="btn btn-secondary btn-block" id="btnSubmitForm">
+                  <span>Enviar Formulario por Correo Interno</span>
+                </button>
+              </div>
+
+              <div class="form-feedback" id="formFeedback" role="alert" style="display: none;"></div>
+            </form>
+          </div>
+
+          <!-- Direct Channels & Lab Info -->
+          <div class="contact-info-panel">
+            <h3 class="panel-heading">Recepción Digital Centralizada</h3>
+            <p class="panel-sub">Estamos listos para sincronizar nuestro flujo con el de tu consulta odontológica.</p>
+
+            <div class="info-contact-blocks">
+              
+              <div class="info-block">
+                <div class="info-block-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="info-block-content">
+                  <span class="info-title">Sede de Producción Digital</span>
+                  <span class="info-text">Centro Tecnológico CAD/CAM</span>
+                  <span class="info-note">Envíos a todo el país vía logística express</span>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <div class="info-block-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div class="info-block-content">
+                  <span class="info-title">Correo para Archivos STL / Casos</span>
+                  <a href="mailto:Labmazzaraexocad@gmail.com" class="info-link">Labmazzaraexocad@gmail.com</a>
+                  <span class="info-note">Recepción 24/7 con acuse de recibo de caso</span>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <div class="info-block-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div class="info-block-content">
+                  <span class="info-title">Atención Telefónica &amp; WhatsApp</span>
+                  <a href="https://wa.me/5491169751973" target="_blank" rel="noopener noreferrer" class="info-link">+54 9 11 6975-1973</a>
+                  <span class="info-note">Línea directa con técnicos de laboratorio (1169751973)</span>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <div class="info-block-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <div class="info-block-content">
+                  <span class="info-title">Horario de Soporte Técnico</span>
+                  <span class="info-text">Lunes a Viernes: 08:30 - 19:30 hs</span>
+                  <span class="info-text">Sábados (Guardia Urgencias): 09:00 - 13:00 hs</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Quick WhatsApp Category Quick Launchers -->
+            <div class="quick-category-launchers">
+              <span class="quick-label">Envío Rápido por Especialidad:</span>
+              <div class="quick-buttons-row">
+                <button class="btn-quick-cat" data-cat="Zirconio y Disilicato">
+                  🦷 Zirconio / Disilicato
+                </button>
+                <button class="btn-quick-cat" data-cat="Prótesis sobre implantes">
+                  🔩 Implantes Ti-Base
+                </button>
+                <button class="btn-quick-cat" data-cat="Modelos 3D">
+                  📐 Modelos / Guías
+                </button>
+                <button class="btn-quick-cat" data-cat="Diseño CAD/CAM">
+                  💻 Diseño Exocad
+                </button>
+              </div>
+            </div>
+
+            <!-- Trust Badge -->
+            <div class="lab-quality-stamp">
+              <span class="stamp-icon">&#9670;</span>
+              <p>EXO-TECH es marca registrada. Protocolo estricto de confidencialidad para datos de pacientes según normativas de salud.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (Deep dark blue / almost solid black, matte finish) -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container footer-container">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Brand Summary -->
+        <div class="footer-col brand-col">
+          <div class="brand-logo footer-logo">
+            <div class="brand-symbol">
+              <img src="assets/logo.png" alt="Laboratorio EXO-TECH" class="brand-logo-img">
+            </div>
+            <div class="brand-text">
+              <span class="brand-name text-white">EXO-TECH</span>
+              <span class="brand-tagline">LABORATORIO DENTAL DIGITAL</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Centro de mecanizado y diseño CAD/CAM de máxima exactitud. Conectamos la odontología moderna con la ingeniería de materiales cerámicos avanzados.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram Laboratorio EXO-TECH">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/5491169751973" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp Laboratorio EXO-TECH (1169751973)">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.974.553 1.83.847 2.781.847h.005c3.18 0 5.767-2.587 5.768-5.766.001-3.181-2.585-5.77-5.767-5.771zm3.393 8.163c-.144.405-.837.774-1.17.824-.312.045-.694.06-2.029-.49-1.705-.702-2.793-2.45-2.879-2.565-.084-.114-.687-.914-.687-1.744 0-.829.434-1.238.587-1.396.155-.157.34-.196.452-.196.114 0 .227.001.326.006.105.005.244-.04.382.291.144.343.491 1.198.534 1.285.043.088.072.19.014.305-.058.114-.087.185-.173.286-.086.101-.182.226-.26.305-.088.087-.179.182-.077.357.102.175.454.749.975 1.213.671.597 1.236.782 1.411.87.175.087.277.073.38-.045.103-.117.438-.51.554-.685.117-.175.233-.146.394-.087.16.058 1.02.481 1.195.568.175.088.291.131.335.205.044.073.044.423-.1 1.031z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Solutions Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Soluciones Clínicas</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#soluciones" class="footer-link">Diseño Exocad DentalCAD</a></li>
+            <li><a href="#soluciones" class="footer-link">Coronas de Zirconio Multicapa</a></li>
+            <li><a href="#soluciones" class="footer-link">Disilicato de Litio Prensado</a></li>
+            <li><a href="#soluciones" class="footer-link">Prótesis sobre Implantes Ti-Base</a></li>
+            <li><a href="#soluciones" class="footer-link">Guías Quirúrgicas Guiadas CBCT</a></li>
+            <li><a href="#soluciones" class="footer-link">Modelos Dentales 3D Impresos</a></li>
+          </ul>
+        </div>
+
+        <!-- Fast Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Navegación</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#inicio" class="footer-link">Inicio</a></li>
+            <li><a href="#beneficios" class="footer-link">Beneficios &amp; Garantía</a></li>
+            <li><a href="#flujo-digital" class="footer-link">Flujo de Trabajo Digital</a></li>
+            <li><a href="#materiales" class="footer-link">Materiales Certificados</a></li>
+            <li><a href="#contacto" class="footer-link">Enviar Caso STL</a></li>
+            <li><a href="#contacto" class="footer-link">Solicitar Lista de Precios</a></li>
+          </ul>
+        </div>
+
+        <!-- Formats & Compatibility -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Ecosistemas Conectados</h4>
+          <p class="footer-note-text">
+            Compatibilidad directa y en la nube con todos los sistemas intraorales:
+          </p>
+          <div class="footer-badges-list">
+            <span class="f-badge">Medit Link</span>
+            <span class="f-badge">3Shape Communicate</span>
+            <span class="f-badge">iTero Cloud</span>
+            <span class="f-badge">Exocad Webview</span>
+            <span class="f-badge">Archivos STL / PLY / OBJ</span>
+          </div>
+          <div class="footer-support-hours">
+            <strong>Recepción digital:</strong> 24 horas, los 365 días del año.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Copyright -->
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          &copy; <span id="currentYear">2026</span> Laboratorio Dental EXO-TECH. Todos los derechos reservados.
+        </p>
+        <p class="legal-text">
+          Tecnología y biomateriales conforme a normativas de calidad ISO 13485 / CE para productos médicos odontológicos.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- SMART FLOATING WHATSAPP BUTTON & POPUP MODAL -->
+  <div class="floating-wa-wrapper" id="floatingWaWrapper">
+    
+    <!-- Smart Interactive Modal Popover -->
+    <div class="wa-popup-modal" id="waPopupModal" aria-hidden="true" role="dialog" aria-labelledby="waModalTitle">
+      <div class="wa-modal-header">
+        <div class="wa-header-avatar">
+          <img src="assets/logo.png" alt="Laboratorio EXO-TECH" class="wa-avatar-img">
+        </div>
+        <div class="wa-header-info">
+          <h4 id="waModalTitle" class="wa-modal-title">Laboratorio EXO-TECH</h4>
+          <span class="wa-modal-status"><span class="status-indicator"></span> En línea &bull; Asesoría Dental</span>
+        </div>
+        <button class="wa-close-btn" id="waCloseBtn" aria-label="Cerrar ventana de WhatsApp">&times;</button>
+      </div>
+
+      <div class="wa-modal-body">
+        <p class="wa-modal-prompt">
+          Selecciona el área de tu consulta para derivarte de inmediato con el especialista técnico correspondiente:
+        </p>
+
+        <div class="wa-options-list">
+          <button class="wa-option-card" data-category="Zirconio y Disilicato">
+            <div class="opt-icon">🦷</div>
+            <div class="opt-text">
+              <span class="opt-name">Zirconio y Disilicato</span>
+              <span class="opt-desc">Coronas monolíticas, puentes, carillas de alta estética</span>
+            </div>
+            <div class="opt-arrow">&rarr;</div>
+          </button>
+
+          <button class="wa-option-card" data-category="Prótesis sobre implantes">
+            <div class="opt-icon">🔩</div>
+            <div class="opt-text">
+              <span class="opt-name">Prótesis sobre implantes</span>
+              <span class="opt-desc">Pilares Ti-Base personalizados, barras y Toronto</span>
+            </div>
+            <div class="opt-arrow">&rarr;</div>
+          </button>
+
+          <button class="wa-option-card" data-category="Modelos 3D">
+            <div class="opt-icon">📐</div>
+            <div class="opt-text">
+              <span class="opt-name">Modelos 3D y Guías</span>
+              <span class="opt-desc">Impresión de modelos de trabajo y guías quirúrgicas CBCT</span>
+            </div>
+            <div class="opt-arrow">&rarr;</div>
+          </button>
+
+          <button class="wa-option-card" data-category="Diseño CAD/CAM">
+            <div class="opt-icon">💻</div>
+            <div class="opt-text">
+              <span class="opt-name">Diseño CAD/CAM</span>
+              <span class="opt-desc">Servicio de diseño en Exocad y fresado industrial</span>
+            </div>
+            <div class="opt-arrow">&rarr;</div>
+          </button>
+        </div>
+
+        <div class="wa-modal-footer">
+          <span class="wa-footer-hint">Se abrirá WhatsApp con el mensaje pre-redactado listo para enviar.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Trigger Button -->
+    <button class="floating-wa-btn" id="floatingWaBtn" aria-label="Contactar por WhatsApp">
+      <div class="wa-btn-pulse"></div>
+      <svg class="floating-wa-svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.974.553 1.83.847 2.781.847h.005c3.18 0 5.767-2.587 5.768-5.766.001-3.181-2.585-5.77-5.767-5.771zm3.393 8.163c-.144.405-.837.774-1.17.824-.312.045-.694.06-2.029-.49-1.705-.702-2.793-2.45-2.879-2.565-.084-.114-.687-.914-.687-1.744 0-.829.434-1.238.587-1.396.155-.157.34-.196.452-.196.114 0 .227.001.326.006.105.005.244-.04.382.291.144.343.491 1.198.534 1.285.043.088.072.19.014.305-.058.114-.087.185-.173.286-.086.101-.182.226-.26.305-.088.087-.179.182-.077.357.102.175.454.749.975 1.213.671.597 1.236.782 1.411.87.175.088.277.073.38-.045.103-.117.438-.51.554-.685.117-.175.233-.146.394-.087.16.058 1.02.481 1.195.568.175.088.291.131.335.205.044.073.044.423-.1 1.031z"/>
+      </svg>
+      <span class="floating-tooltip">¿Consultar un caso?</span>
+    </button>
+  </div>
+
+  <!-- Main Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
